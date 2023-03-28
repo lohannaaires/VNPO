@@ -1,0 +1,3202 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://oracowl.ppgcc.ufersa.edu.br/vnpo"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://oracowl.ppgcc.ufersa.edu.br/vnpo">
+    <Prefix name="" IRI="http://oracowl.ppgcc.ufersa.edu.br/vnpo"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vnpo" IRI="http://oracowl.ppgcc.ufersa.edu.br/vnpo#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en">Value network modeling is a technique that can be used by a company to better understand the business network of which it is a part and to facilitate decision making about value co-creation ideas for consumers. With this ontology it is possible to instantiate the elements of a value network with provenance for the semi-automatic construction of business models. Value network models with provenance can present different views of value creation and provide a better understanding of how this information can be shared within the network. The generated models can be useful for companies that want to start providing provenance information about their products or think of other ways to share it.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en">Value Network with Provenance Ontology (VNPO)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Value Network with Provenance</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusinessNeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChainedPath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Consumer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CounterObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeclaredProvenance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeclaredValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeographicalIndication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Payment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Policy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Production"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Provenance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProvenanceAssessment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProvenanceValueNetwork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Provider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Purchase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RawProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Receipt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SafeShortcut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SafeWaypoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shortcut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SimplePath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValueActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValueObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValueProposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Waypoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#bundles"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consumes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#declares"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#delivers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#demands"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_componency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_component"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_constituition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_declared_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_objective_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_stock_flow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_subjective_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_bundled_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_component_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_consumed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_declared_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_delivered_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_demanded_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_managed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_objective_value_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_provided_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_satisfied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_shared_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_stock_flow_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_subjective_value_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manages"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#provides"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#satisfies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#shares"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_GI_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_certification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_geographical_area"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_link"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_origin_country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_production_method"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_symbol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_type"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neutral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SomewhatSatisfactory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SomewhatUnsatisfactory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VerySatisfactory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VeryUnsatisfactory"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#dcterms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Agent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Actor"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#delivers"/>
+                <Class IRI="#Payment"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#manages"/>
+                <Class IRI="#Production"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#provides"/>
+                <Class IRI="#Sale"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#delivers"/>
+                <Class IRI="#Payment"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#manages"/>
+                <Class IRI="#Production"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#provides"/>
+                <Class IRI="#Sale"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BusinessNeed"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_demanded_by"/>
+                <Class IRI="#Consumer"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_satisfied_by"/>
+                <ObjectUnionOf>
+                    <Class IRI="#EndProduct"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_demanded_by"/>
+                <Class IRI="#Consumer"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_satisfied_by"/>
+                <ObjectUnionOf>
+                    <Class IRI="#EndProduct"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#has_ID"/>
+                <Datatype abbreviatedIRI="xsd:int"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChainedPath"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Policy"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_componency"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Provider"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#provides"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="#Purchase"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#shares"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="#Provenance"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                        <ObjectIntersectionOf>
+                                            <Class IRI="#Payment"/>
+                                            <ObjectSomeValuesFrom>
+                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                <ObjectIntersectionOf>
+                                                    <Class IRI="#Agent"/>
+                                                    <ObjectSomeValuesFrom>
+                                                        <ObjectProperty IRI="#manages"/>
+                                                        <ObjectIntersectionOf>
+                                                            <Class IRI="#Production"/>
+                                                            <ObjectSomeValuesFrom>
+                                                                <ObjectProperty IRI="#shares"/>
+                                                                <ObjectIntersectionOf>
+                                                                    <Class IRI="#Provenance"/>
+                                                                    <ObjectSomeValuesFrom>
+                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                        <ObjectIntersectionOf>
+                                                                            <Class IRI="#Sale"/>
+                                                                            <ObjectSomeValuesFrom>
+                                                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                                                <ObjectIntersectionOf>
+                                                                                    <Class IRI="#Agent"/>
+                                                                                    <ObjectSomeValuesFrom>
+                                                                                        <ObjectProperty IRI="#provides"/>
+                                                                                        <ObjectIntersectionOf>
+                                                                                            <Class IRI="#Sale"/>
+                                                                                            <ObjectSomeValuesFrom>
+                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                <ObjectIntersectionOf>
+                                                                                                    <Class IRI="#Provenance"/>
+                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                        <ObjectIntersectionOf>
+                                                                                                            <Class IRI="#Payment"/>
+                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                                                <ObjectIntersectionOf>
+                                                                                                                    <Class IRI="#Agent"/>
+                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                        <ObjectProperty IRI="#delivers"/>
+                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                            <Class IRI="#Payment"/>
+                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                                                <ObjectIntersectionOf>
+                                                                                                                                    <Class IRI="#Provenance"/>
+                                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                                            <Class IRI="#Sale"/>
+                                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                                                                                                                <ObjectIntersectionOf>
+                                                                                                                                                    <Class IRI="#Agent"/>
+                                                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                                                        <ObjectProperty IRI="#provides"/>
+                                                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                                                            <Class IRI="#Sale"/>
+                                                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                                                                                <ObjectIntersectionOf>
+                                                                                                                                                                    <Class IRI="#Provenance"/>
+                                                                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                                                                            <Class IRI="#Receipt"/>
+                                                                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                                                                                                                <Class IRI="#Consumer"/>
+                                                                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                                                                </ObjectIntersectionOf>
+                                                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                                                </ObjectIntersectionOf>
+                                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                                </ObjectIntersectionOf>
+                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                </ObjectIntersectionOf>
+                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                        </ObjectIntersectionOf>
+                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                </ObjectIntersectionOf>
+                                                                                            </ObjectSomeValuesFrom>
+                                                                                        </ObjectIntersectionOf>
+                                                                                    </ObjectSomeValuesFrom>
+                                                                                </ObjectIntersectionOf>
+                                                                            </ObjectSomeValuesFrom>
+                                                                        </ObjectIntersectionOf>
+                                                                    </ObjectSomeValuesFrom>
+                                                                </ObjectIntersectionOf>
+                                                            </ObjectSomeValuesFrom>
+                                                        </ObjectIntersectionOf>
+                                                    </ObjectSomeValuesFrom>
+                                                </ObjectIntersectionOf>
+                                            </ObjectSomeValuesFrom>
+                                        </ObjectIntersectionOf>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Consumer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Actor"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#delivers"/>
+                <Class IRI="#Receipt"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#demands"/>
+                <Class IRI="#BusinessNeed"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#declares"/>
+                <ObjectUnionOf>
+                    <Class IRI="#DeclaredValue"/>
+                    <Class IRI="#ProvenanceAssessment"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#delivers"/>
+                <Class IRI="#Receipt"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#demands"/>
+                <Class IRI="#BusinessNeed"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CounterObject"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueObject"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_bundled_by"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Production"/>
+                        <Class IRI="#Sale"/>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_consumed_by"/>
+                    <Class IRI="#Purchase"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_bundled_by"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Production"/>
+                        <Class IRI="#Sale"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_consumed_by"/>
+                    <Class IRI="#Purchase"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_stock_flow"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Payment"/>
+                    <Class IRI="#Receipt"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_stock_flow"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Payment"/>
+                    <Class IRI="#Receipt"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DeclaredValue"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Neutral"/>
+            <NamedIndividual IRI="#SomewhatSatisfactory"/>
+            <NamedIndividual IRI="#SomewhatUnsatisfactory"/>
+            <NamedIndividual IRI="#VerySatisfactory"/>
+            <NamedIndividual IRI="#VeryUnsatisfactory"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EndProduct"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueObject"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_bundled_by"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Payment"/>
+                        <Class IRI="#Sale"/>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_consumed_by"/>
+                    <Class IRI="#Receipt"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_bundled_by"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Payment"/>
+                        <Class IRI="#Sale"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_consumed_by"/>
+                    <Class IRI="#Receipt"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_component"/>
+                <Class IRI="#RawProduct"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_objective_value"/>
+                <ObjectUnionOf>
+                    <Class IRI="#DeclaredProvenance"/>
+                    <Class IRI="#GeographicalIndication"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_stock_flow"/>
+                <Class IRI="#Sale"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_produced_by"/>
+                <Class IRI="#Production"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#satisfies"/>
+                <Class IRI="#BusinessNeed"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_component"/>
+                <Class IRI="#RawProduct"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_objective_value"/>
+                <ObjectUnionOf>
+                    <Class IRI="#DeclaredProvenance"/>
+                    <Class IRI="#GeographicalIndication"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_stock_flow"/>
+                <Class IRI="#Sale"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_produced_by"/>
+                <Class IRI="#Production"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#satisfies"/>
+                <Class IRI="#BusinessNeed"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Payment"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueActivity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_stock_flow_of"/>
+                    <Class IRI="#CounterObject"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_stock_flow_of"/>
+                    <Class IRI="#CounterObject"/>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#bundles"/>
+                <ObjectUnionOf>
+                    <Class IRI="#EndProduct"/>
+                    <Class IRI="#Provenance"/>
+                    <Class IRI="#RawProduct"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_delivered_by"/>
+                <Class IRI="#Agent"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#bundles"/>
+                <ObjectUnionOf>
+                    <Class IRI="#EndProduct"/>
+                    <Class IRI="#Provenance"/>
+                    <Class IRI="#RawProduct"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_delivered_by"/>
+                <Class IRI="#Agent"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Production"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueActivity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#bundles"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#CounterObject"/>
+                        <Class IRI="#Provenance"/>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#consumes"/>
+                    <Class IRI="#RawProduct"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#produces"/>
+                    <Class IRI="#EndProduct"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#bundles"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#CounterObject"/>
+                        <Class IRI="#Provenance"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#consumes"/>
+                    <Class IRI="#RawProduct"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#produces"/>
+                    <Class IRI="#EndProduct"/>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_managed_by"/>
+                <Class IRI="#Agent"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_managed_by"/>
+                <Class IRI="#Agent"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Provenance"/>
+        <ObjectUnionOf>
+            <Class IRI="#DeclaredProvenance"/>
+            <Class IRI="#GeographicalIndication"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ProvenanceAssessment"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueProposition"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_declared_value"/>
+                <Class IRI="#DeclaredValue"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_declared_by"/>
+                <Class IRI="#Consumer"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_subjective_value_of"/>
+                <Class IRI="#Provenance"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_declared_value"/>
+                <Class IRI="#DeclaredValue"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_declared_by"/>
+                <Class IRI="#Consumer"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_subjective_value_of"/>
+                <Class IRI="#Provenance"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ProvenanceValueNetwork"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_constituition"/>
+                <Class IRI="#BusinessNeed"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_constituition"/>
+                <Class IRI="#Policy"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_constituition"/>
+                <ObjectUnionOf>
+                    <Class IRI="#BusinessNeed"/>
+                    <Class IRI="#Policy"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Provider"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Actor"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#provides"/>
+                <Class IRI="#Purchase"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#provides"/>
+                <Class IRI="#Purchase"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Purchase"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueActivity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_stock_flow_of"/>
+                    <Class IRI="#RawProduct"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_stock_flow_of"/>
+                    <Class IRI="#RawProduct"/>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#consumes"/>
+                <Class IRI="#CounterObject"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_provided_by"/>
+                <Class IRI="#Provider"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#consumes"/>
+                <Class IRI="#CounterObject"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_provided_by"/>
+                <Class IRI="#Provider"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RawProduct"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueObject"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_bundled_by"/>
+                    <Class IRI="#Payment"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_consumed_by"/>
+                    <Class IRI="#Production"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_bundled_by"/>
+                    <Class IRI="#Payment"/>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_consumed_by"/>
+                    <Class IRI="#Production"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_objective_value"/>
+                <ObjectUnionOf>
+                    <Class IRI="#DeclaredProvenance"/>
+                    <Class IRI="#GeographicalIndication"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_stock_flow"/>
+                <Class IRI="#Purchase"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_component_of"/>
+                <Class IRI="#EndProduct"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_objective_value"/>
+                <ObjectUnionOf>
+                    <Class IRI="#DeclaredProvenance"/>
+                    <Class IRI="#GeographicalIndication"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#has_stock_flow"/>
+                <Class IRI="#Purchase"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_component_of"/>
+                <Class IRI="#EndProduct"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Receipt"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueActivity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#bundles"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#consumes"/>
+                    <Class IRI="#EndProduct"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#bundles"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#consumes"/>
+                    <Class IRI="#EndProduct"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_delivered_by"/>
+                <Class IRI="#Consumer"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_stock_flow_of"/>
+                <Class IRI="#CounterObject"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_delivered_by"/>
+                <Class IRI="#Consumer"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_stock_flow_of"/>
+                <Class IRI="#CounterObject"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SafeShortcut"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Policy"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_componency"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Agent"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#manages"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="#Production"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#shares"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="#GeographicalIndication"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                        <ObjectIntersectionOf>
+                                            <Class IRI="#Sale"/>
+                                            <ObjectSomeValuesFrom>
+                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                <ObjectIntersectionOf>
+                                                    <Class IRI="#Agent"/>
+                                                    <ObjectSomeValuesFrom>
+                                                        <ObjectProperty IRI="#provides"/>
+                                                        <ObjectIntersectionOf>
+                                                            <Class IRI="#Sale"/>
+                                                            <ObjectSomeValuesFrom>
+                                                                <ObjectProperty IRI="#shares"/>
+                                                                <ObjectIntersectionOf>
+                                                                    <Class IRI="#GeographicalIndication"/>
+                                                                    <ObjectSomeValuesFrom>
+                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                        <ObjectIntersectionOf>
+                                                                            <Class IRI="#Payment"/>
+                                                                            <ObjectSomeValuesFrom>
+                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                <ObjectIntersectionOf>
+                                                                                    <Class IRI="#Agent"/>
+                                                                                    <ObjectSomeValuesFrom>
+                                                                                        <ObjectProperty IRI="#delivers"/>
+                                                                                        <ObjectIntersectionOf>
+                                                                                            <Class IRI="#Payment"/>
+                                                                                            <ObjectSomeValuesFrom>
+                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                <ObjectIntersectionOf>
+                                                                                                    <Class IRI="#GeographicalIndication"/>
+                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                        <ObjectIntersectionOf>
+                                                                                                            <Class IRI="#Sale"/>
+                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                                                                                <ObjectIntersectionOf>
+                                                                                                                    <Class IRI="#Agent"/>
+                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                        <ObjectProperty IRI="#provides"/>
+                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                            <Class IRI="#Sale"/>
+                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                                                <ObjectIntersectionOf>
+                                                                                                                                    <Class IRI="#GeographicalIndication"/>
+                                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                                            <Class IRI="#Receipt"/>
+                                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                                                                                <Class IRI="#Consumer"/>
+                                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                                </ObjectIntersectionOf>
+                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                </ObjectIntersectionOf>
+                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                        </ObjectIntersectionOf>
+                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                </ObjectIntersectionOf>
+                                                                                            </ObjectSomeValuesFrom>
+                                                                                        </ObjectIntersectionOf>
+                                                                                    </ObjectSomeValuesFrom>
+                                                                                </ObjectIntersectionOf>
+                                                                            </ObjectSomeValuesFrom>
+                                                                        </ObjectIntersectionOf>
+                                                                    </ObjectSomeValuesFrom>
+                                                                </ObjectIntersectionOf>
+                                                            </ObjectSomeValuesFrom>
+                                                        </ObjectIntersectionOf>
+                                                    </ObjectSomeValuesFrom>
+                                                </ObjectIntersectionOf>
+                                            </ObjectSomeValuesFrom>
+                                        </ObjectIntersectionOf>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SafeWaypoint"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Policy"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_componency"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Agent"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#manages"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="#Production"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#shares"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="#GeographicalIndication"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                        <ObjectIntersectionOf>
+                                            <Class IRI="#Sale"/>
+                                            <ObjectSomeValuesFrom>
+                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                <ObjectIntersectionOf>
+                                                    <Class IRI="#Agent"/>
+                                                    <ObjectSomeValuesFrom>
+                                                        <ObjectProperty IRI="#provides"/>
+                                                        <ObjectIntersectionOf>
+                                                            <Class IRI="#Sale"/>
+                                                            <ObjectSomeValuesFrom>
+                                                                <ObjectProperty IRI="#shares"/>
+                                                                <ObjectIntersectionOf>
+                                                                    <Class IRI="#GeographicalIndication"/>
+                                                                    <ObjectSomeValuesFrom>
+                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                        <ObjectIntersectionOf>
+                                                                            <Class IRI="#Receipt"/>
+                                                                            <ObjectSomeValuesFrom>
+                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                <Class IRI="#Consumer"/>
+                                                                            </ObjectSomeValuesFrom>
+                                                                        </ObjectIntersectionOf>
+                                                                    </ObjectSomeValuesFrom>
+                                                                </ObjectIntersectionOf>
+                                                            </ObjectSomeValuesFrom>
+                                                        </ObjectIntersectionOf>
+                                                    </ObjectSomeValuesFrom>
+                                                </ObjectIntersectionOf>
+                                            </ObjectSomeValuesFrom>
+                                        </ObjectIntersectionOf>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sale"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ValueActivity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#is_stock_flow_of"/>
+                    <Class IRI="#EndProduct"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_stock_flow_of"/>
+                    <Class IRI="#EndProduct"/>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#shares"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#bundles"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CounterObject"/>
+                    <Class IRI="#EndProduct"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_provided_by"/>
+                <Class IRI="#Agent"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#bundles"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CounterObject"/>
+                    <Class IRI="#EndProduct"/>
+                    <Class IRI="#Provenance"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#is_provided_by"/>
+                <Class IRI="#Agent"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shortcut"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Policy"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_componency"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Agent"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#manages"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="#Production"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#shares"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="#DeclaredProvenance"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                        <ObjectIntersectionOf>
+                                            <Class IRI="#Sale"/>
+                                            <ObjectSomeValuesFrom>
+                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                <ObjectIntersectionOf>
+                                                    <Class IRI="#Agent"/>
+                                                    <ObjectSomeValuesFrom>
+                                                        <ObjectProperty IRI="#provides"/>
+                                                        <ObjectIntersectionOf>
+                                                            <Class IRI="#Sale"/>
+                                                            <ObjectSomeValuesFrom>
+                                                                <ObjectProperty IRI="#shares"/>
+                                                                <ObjectIntersectionOf>
+                                                                    <Class IRI="#DeclaredProvenance"/>
+                                                                    <ObjectSomeValuesFrom>
+                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                        <ObjectIntersectionOf>
+                                                                            <Class IRI="#Payment"/>
+                                                                            <ObjectSomeValuesFrom>
+                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                <ObjectIntersectionOf>
+                                                                                    <Class IRI="#Agent"/>
+                                                                                    <ObjectSomeValuesFrom>
+                                                                                        <ObjectProperty IRI="#delivers"/>
+                                                                                        <ObjectIntersectionOf>
+                                                                                            <Class IRI="#Payment"/>
+                                                                                            <ObjectSomeValuesFrom>
+                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                <ObjectIntersectionOf>
+                                                                                                    <Class IRI="#DeclaredProvenance"/>
+                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                        <ObjectIntersectionOf>
+                                                                                                            <Class IRI="#Sale"/>
+                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                                                                                <ObjectIntersectionOf>
+                                                                                                                    <Class IRI="#Agent"/>
+                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                        <ObjectProperty IRI="#provides"/>
+                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                            <Class IRI="#Sale"/>
+                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                                                <ObjectIntersectionOf>
+                                                                                                                                    <Class IRI="#DeclaredProvenance"/>
+                                                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                                                        <ObjectIntersectionOf>
+                                                                                                                                            <Class IRI="#Receipt"/>
+                                                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                                                                                <Class IRI="#Consumer"/>
+                                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                                </ObjectIntersectionOf>
+                                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                                        </ObjectIntersectionOf>
+                                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                                </ObjectIntersectionOf>
+                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                        </ObjectIntersectionOf>
+                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                </ObjectIntersectionOf>
+                                                                                            </ObjectSomeValuesFrom>
+                                                                                        </ObjectIntersectionOf>
+                                                                                    </ObjectSomeValuesFrom>
+                                                                                </ObjectIntersectionOf>
+                                                                            </ObjectSomeValuesFrom>
+                                                                        </ObjectIntersectionOf>
+                                                                    </ObjectSomeValuesFrom>
+                                                                </ObjectIntersectionOf>
+                                                            </ObjectSomeValuesFrom>
+                                                        </ObjectIntersectionOf>
+                                                    </ObjectSomeValuesFrom>
+                                                </ObjectIntersectionOf>
+                                            </ObjectSomeValuesFrom>
+                                        </ObjectIntersectionOf>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SimplePath"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Policy"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_componency"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Provider"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#provides"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="#Purchase"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#shares"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="#Provenance"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                        <ObjectIntersectionOf>
+                                            <Class IRI="#Payment"/>
+                                            <ObjectSomeValuesFrom>
+                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                <ObjectIntersectionOf>
+                                                    <Class IRI="#Agent"/>
+                                                    <ObjectSomeValuesFrom>
+                                                        <ObjectProperty IRI="#manages"/>
+                                                        <ObjectIntersectionOf>
+                                                            <Class IRI="#Production"/>
+                                                            <ObjectSomeValuesFrom>
+                                                                <ObjectProperty IRI="#shares"/>
+                                                                <ObjectIntersectionOf>
+                                                                    <Class IRI="#Provenance"/>
+                                                                    <ObjectSomeValuesFrom>
+                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                        <ObjectIntersectionOf>
+                                                                            <Class IRI="#Sale"/>
+                                                                            <ObjectSomeValuesFrom>
+                                                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                                                <ObjectIntersectionOf>
+                                                                                    <Class IRI="#Agent"/>
+                                                                                    <ObjectSomeValuesFrom>
+                                                                                        <ObjectProperty IRI="#provides"/>
+                                                                                        <ObjectIntersectionOf>
+                                                                                            <Class IRI="#Sale"/>
+                                                                                            <ObjectSomeValuesFrom>
+                                                                                                <ObjectProperty IRI="#shares"/>
+                                                                                                <ObjectIntersectionOf>
+                                                                                                    <Class IRI="#Provenance"/>
+                                                                                                    <ObjectSomeValuesFrom>
+                                                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                                                        <ObjectIntersectionOf>
+                                                                                                            <Class IRI="#Receipt"/>
+                                                                                                            <ObjectSomeValuesFrom>
+                                                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                                                <Class IRI="#Consumer"/>
+                                                                                                            </ObjectSomeValuesFrom>
+                                                                                                        </ObjectIntersectionOf>
+                                                                                                    </ObjectSomeValuesFrom>
+                                                                                                </ObjectIntersectionOf>
+                                                                                            </ObjectSomeValuesFrom>
+                                                                                        </ObjectIntersectionOf>
+                                                                                    </ObjectSomeValuesFrom>
+                                                                                </ObjectIntersectionOf>
+                                                                            </ObjectSomeValuesFrom>
+                                                                        </ObjectIntersectionOf>
+                                                                    </ObjectSomeValuesFrom>
+                                                                </ObjectIntersectionOf>
+                                                            </ObjectSomeValuesFrom>
+                                                        </ObjectIntersectionOf>
+                                                    </ObjectSomeValuesFrom>
+                                                </ObjectIntersectionOf>
+                                            </ObjectSomeValuesFrom>
+                                        </ObjectIntersectionOf>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ValueProposition"/>
+        <ObjectUnionOf>
+            <Class IRI="#ProvenanceAssessment"/>
+            <Class IRI="#ValueObject"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Waypoint"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Policy"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_componency"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Agent"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#manages"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="#Production"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#shares"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="#DeclaredProvenance"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                        <ObjectIntersectionOf>
+                                            <Class IRI="#Sale"/>
+                                            <ObjectSomeValuesFrom>
+                                                <ObjectProperty IRI="#is_provided_by"/>
+                                                <ObjectIntersectionOf>
+                                                    <Class IRI="#Agent"/>
+                                                    <ObjectSomeValuesFrom>
+                                                        <ObjectProperty IRI="#provides"/>
+                                                        <ObjectIntersectionOf>
+                                                            <Class IRI="#Sale"/>
+                                                            <ObjectSomeValuesFrom>
+                                                                <ObjectProperty IRI="#shares"/>
+                                                                <ObjectIntersectionOf>
+                                                                    <Class IRI="#DeclaredProvenance"/>
+                                                                    <ObjectSomeValuesFrom>
+                                                                        <ObjectProperty IRI="#is_bundled_by"/>
+                                                                        <ObjectIntersectionOf>
+                                                                            <Class IRI="#Receipt"/>
+                                                                            <ObjectSomeValuesFrom>
+                                                                                <ObjectProperty IRI="#is_delivered_by"/>
+                                                                                <Class IRI="#Consumer"/>
+                                                                            </ObjectSomeValuesFrom>
+                                                                        </ObjectIntersectionOf>
+                                                                    </ObjectSomeValuesFrom>
+                                                                </ObjectIntersectionOf>
+                                                            </ObjectSomeValuesFrom>
+                                                        </ObjectIntersectionOf>
+                                                    </ObjectSomeValuesFrom>
+                                                </ObjectIntersectionOf>
+                                            </ObjectSomeValuesFrom>
+                                        </ObjectIntersectionOf>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_ID"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <Class IRI="#Provenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_location"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_origin_country"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_product_description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_product_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_product_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_production_method"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclaredProvenance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <Class IRI="#Provenance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_GI_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_certification"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_geographical_area"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_link"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_number"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_origin_country"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_product_description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_product_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_product_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_production_method"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_symbol"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeographicalIndication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Policy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_ID"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <Class IRI="#ValueObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_subjective_value"/>
+            <Class IRI="#ProvenanceAssessment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_bundled_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Payment"/>
+                <Class IRI="#Production"/>
+                <Class IRI="#Receipt"/>
+                <Class IRI="#Sale"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_objective_value_of"/>
+            <ObjectUnionOf>
+                <Class IRI="#EndProduct"/>
+                <Class IRI="#RawProduct"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_shared_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Payment"/>
+                <Class IRI="#Production"/>
+                <Class IRI="#Purchase"/>
+                <Class IRI="#Sale"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#satisfies"/>
+            <Class IRI="#BusinessNeed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_subjective_value"/>
+            <Class IRI="#ProvenanceAssessment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_bundled_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Payment"/>
+                <Class IRI="#Production"/>
+                <Class IRI="#Receipt"/>
+                <Class IRI="#Sale"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_objective_value_of"/>
+            <ObjectUnionOf>
+                <Class IRI="#EndProduct"/>
+                <Class IRI="#RawProduct"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_shared_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Payment"/>
+                <Class IRI="#Production"/>
+                <Class IRI="#Purchase"/>
+                <Class IRI="#Sale"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provenance"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#satisfies"/>
+            <Class IRI="#BusinessNeed"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ValueActivity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_ID"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ValueActivity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ValueObject"/>
+        <Class IRI="#ValueProposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ValueProposition"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_ID"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Actor"/>
+        <Class IRI="#BusinessNeed"/>
+        <Class IRI="#DeclaredValue"/>
+        <Class IRI="#Policy"/>
+        <Class IRI="#ValueActivity"/>
+        <Class IRI="#ValueProposition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Agent"/>
+        <Class IRI="#Consumer"/>
+        <Class IRI="#Provider"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ChainedPath"/>
+        <Class IRI="#SafeShortcut"/>
+        <Class IRI="#SafeWaypoint"/>
+        <Class IRI="#Shortcut"/>
+        <Class IRI="#SimplePath"/>
+        <Class IRI="#Waypoint"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CounterObject"/>
+        <Class IRI="#EndProduct"/>
+        <Class IRI="#Provenance"/>
+        <Class IRI="#RawProduct"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DeclaredProvenance"/>
+        <Class IRI="#GeographicalIndication"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Payment"/>
+        <Class IRI="#Production"/>
+        <Class IRI="#Purchase"/>
+        <Class IRI="#Receipt"/>
+        <Class IRI="#Sale"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#DeclaredValue"/>
+        <NamedIndividual IRI="#Neutral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeclaredValue"/>
+        <NamedIndividual IRI="#SomewhatSatisfactory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeclaredValue"/>
+        <NamedIndividual IRI="#SomewhatUnsatisfactory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeclaredValue"/>
+        <NamedIndividual IRI="#VerySatisfactory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeclaredValue"/>
+        <NamedIndividual IRI="#VeryUnsatisfactory"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#bundles"/>
+        <ObjectProperty IRI="#is_bundled_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#consumes"/>
+        <ObjectProperty IRI="#is_consumed_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#declares"/>
+        <ObjectProperty IRI="#is_declared_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#delivers"/>
+        <ObjectProperty IRI="#is_delivered_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#demands"/>
+        <ObjectProperty IRI="#is_demanded_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_component"/>
+        <ObjectProperty IRI="#is_component_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_objective_value"/>
+        <ObjectProperty IRI="#is_objective_value_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_stock_flow"/>
+        <ObjectProperty IRI="#is_stock_flow_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_subjective_value"/>
+        <ObjectProperty IRI="#is_subjective_value_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_managed_by"/>
+        <ObjectProperty IRI="#manages"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_produced_by"/>
+        <ObjectProperty IRI="#produces"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_provided_by"/>
+        <ObjectProperty IRI="#provides"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_satisfied_by"/>
+        <ObjectProperty IRI="#satisfies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_shared_by"/>
+        <ObjectProperty IRI="#shares"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_objective_value"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#bundles"/>
+        <ObjectUnionOf>
+            <Class IRI="#Payment"/>
+            <Class IRI="#Production"/>
+            <Class IRI="#Receipt"/>
+            <Class IRI="#Sale"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consumes"/>
+        <ObjectUnionOf>
+            <Class IRI="#Production"/>
+            <Class IRI="#Purchase"/>
+            <Class IRI="#Receipt"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#declares"/>
+        <Class IRI="#Consumer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#delivers"/>
+        <ObjectUnionOf>
+            <Class IRI="#Agent"/>
+            <Class IRI="#Consumer"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#demands"/>
+        <Class IRI="#Consumer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_component"/>
+        <Class IRI="#EndProduct"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_constituition"/>
+        <Class IRI="#ProvenanceValueNetwork"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_declared_value"/>
+        <Class IRI="#ProvenanceAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_objective_value"/>
+        <ObjectUnionOf>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#RawProduct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_stock_flow"/>
+        <ObjectUnionOf>
+            <Class IRI="#CounterObject"/>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#RawProduct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_subjective_value"/>
+        <Class IRI="#Provenance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_bundled_by"/>
+        <ObjectUnionOf>
+            <Class IRI="#CounterObject"/>
+            <Class IRI="#DeclaredProvenance"/>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#GeographicalIndication"/>
+            <Class IRI="#Provenance"/>
+            <Class IRI="#RawProduct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_demanded_by"/>
+        <Class IRI="#BusinessNeed"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_stock_flow_of"/>
+        <ObjectUnionOf>
+            <Class IRI="#Payment"/>
+            <Class IRI="#Purchase"/>
+            <Class IRI="#Receipt"/>
+            <Class IRI="#Sale"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#manages"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#Production"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#provides"/>
+        <ObjectUnionOf>
+            <Class IRI="#Agent"/>
+            <Class IRI="#Provider"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#satisfies"/>
+        <ObjectUnionOf>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#Provenance"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#shares"/>
+        <ObjectUnionOf>
+            <Class IRI="#Payment"/>
+            <Class IRI="#Production"/>
+            <Class IRI="#Purchase"/>
+            <Class IRI="#Sale"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#bundles"/>
+        <ObjectUnionOf>
+            <Class IRI="#CounterObject"/>
+            <Class IRI="#DeclaredProvenance"/>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#GeographicalIndication"/>
+            <Class IRI="#Provenance"/>
+            <Class IRI="#RawProduct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consumes"/>
+        <ObjectUnionOf>
+            <Class IRI="#CounterObject"/>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#RawProduct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#declares"/>
+        <ObjectUnionOf>
+            <Class IRI="#DeclaredValue"/>
+            <Class IRI="#ProvenanceAssessment"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#delivers"/>
+        <ObjectUnionOf>
+            <Class IRI="#Payment"/>
+            <Class IRI="#Receipt"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#demands"/>
+        <Class IRI="#BusinessNeed"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_componency"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_component"/>
+        <Class IRI="#RawProduct"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_declared_value"/>
+        <Class IRI="#DeclaredValue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_objective_value"/>
+        <Class IRI="#Provenance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_stock_flow"/>
+        <ObjectUnionOf>
+            <Class IRI="#Payment"/>
+            <Class IRI="#Purchase"/>
+            <Class IRI="#Receipt"/>
+            <Class IRI="#Sale"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_subjective_value"/>
+        <Class IRI="#ProvenanceAssessment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_bundled_by"/>
+        <ObjectUnionOf>
+            <Class IRI="#Payment"/>
+            <Class IRI="#Production"/>
+            <Class IRI="#Receipt"/>
+            <Class IRI="#Sale"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_demanded_by"/>
+        <Class IRI="#Consumer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_stock_flow_of"/>
+        <ObjectUnionOf>
+            <Class IRI="#CounterObject"/>
+            <Class IRI="#EndProduct"/>
+            <Class IRI="#RawProduct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#manages"/>
+        <Class IRI="#Production"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#EndProduct"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#provides"/>
+        <ObjectUnionOf>
+            <Class IRI="#Purchase"/>
+            <Class IRI="#Sale"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#satisfies"/>
+        <Class IRI="#BusinessNeed"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#shares"/>
+        <ObjectUnionOf>
+            <Class IRI="#DeclaredProvenance"/>
+            <Class IRI="#GeographicalIndication"/>
+            <Class IRI="#Provenance"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_GI_name"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_ID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_certification"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_geographical_area"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_link"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_location"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_name"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_number"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_origin_country"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_product_description"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_product_name"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_product_type"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_production_method"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_symbol"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_type"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_ID"/>
+        <ObjectUnionOf>
+            <Class IRI="#Actor"/>
+            <Class IRI="#BusinessNeed"/>
+            <Class IRI="#Policy"/>
+            <Class IRI="#ValueActivity"/>
+            <Class IRI="#ValueProposition"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_name"/>
+        <ObjectUnionOf>
+            <Class IRI="#Actor"/>
+            <Class IRI="#ValueActivity"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_GI_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_ID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_certification"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_geographical_area"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_link"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_location"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_number"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_origin_country"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_production_method"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_symbol"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Actor</IRI>
+        <Literal xml:lang="en">An actor is anyone who has a role in the creation of value, transfer and consumption of products linked to their origin.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Actor</IRI>
+        <Literal xml:lang="pt">Um ator é todo aquele que tem um papel na criação de valor, transferência e consumo de produtos vinculados à procedência.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Actor</IRI>
+        <Literal xml:lang="en">Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Actor</IRI>
+        <Literal xml:lang="pt">Ator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="pt">O agente pode ser uma empresa, grupo ou indivíduo que transforma as matérias-primas em um produto finalizado ou que faz com que este produto chegue ao consumidor final. 
+O agente é o responsável por executar pelo menos uma das seguintes atividades narede: pagamento, produção ou venda.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="en">The agent can be a company, group or individual that transforms raw materials into an end product or that makes this product reach the final consumer. 
+The agent is responsible for performing at least one of the following activities on the network: payment, production or sale.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="en">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="pt">Agente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BusinessNeed</IRI>
+        <Literal xml:lang="en">A business need is a demand from an actor of the Consumer type that is satisfied by an end product and its provenance information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BusinessNeed</IRI>
+        <Literal xml:lang="pt">Uma necessidade de negócio é uma demanda de um ator do tipo Consumidor que é satisfeita por um produto finalizado e suas informações de procedência.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BusinessNeed</IRI>
+        <Literal xml:lang="en">Business Need</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BusinessNeed</IRI>
+        <Literal xml:lang="pt">Necessidade de Negócio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ChainedPath</IRI>
+        <Literal xml:lang="en">Chained Path</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Consumer</IRI>
+        <Literal xml:lang="pt">O consumidor é o ator que possui uma necessidade de negócio a ser satisfeita. 
+Ao optar pela compra de um produto finalizado, é responsável por entregar o recebimento de um contra objeto a um agente. 
+O consumidor também é o ator responsável por avaliar as informações de procedência.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Consumer</IRI>
+        <Literal xml:lang="en">The consumer is the actor who has a business need to be satisfied. 
+When choosing to purchase an end product, he is responsible for delivering the receipt of a counter object to an agent. 
+The consumer is also the actor responsible for evaluating the provenance information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Consumer</IRI>
+        <Literal xml:lang="en">Consumer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Consumer</IRI>
+        <Literal xml:lang="pt">Consumidor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CounterObject</IRI>
+        <Literal xml:lang="pt">A contrapartida é o objeto entregue na troca por um produto bruto ou finalizado. 
+Ela indica o preço pago por algum outro objeto da rede e não se restringe a apenas dinheiro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CounterObject</IRI>
+        <Literal xml:lang="en">The counter object is the object delivered in exchange for a raw or end product. 
+It indicates the price paid for some other object on the network and is not restricted to just money.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CounterObject</IRI>
+        <Literal xml:lang="pt">Contrapartida</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CounterObject</IRI>
+        <Literal xml:lang="en">Counter Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DeclaredProvenance</IRI>
+        <Literal xml:lang="pt">A procedência declarada refere-se às informações de procedência de produtos brutos ou finalizados, declaradas por fornecedores ou agentes. 
+É uma procedência não protegida.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DeclaredProvenance</IRI>
+        <Literal xml:lang="en">Declared provenance refers to the provenance information of raw or end products, declared by providers or agents. 
+It is an unprotected provenance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DeclaredProvenance</IRI>
+        <Literal xml:lang="en">Declared Provenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DeclaredProvenance</IRI>
+        <Literal xml:lang="pt">Procedência Declarada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DeclaredValue</IRI>
+        <Literal xml:lang="en">Declared Value indicates a range of customer satisfaction levels to be attributed to a provenance evaluation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DeclaredValue</IRI>
+        <Literal xml:lang="pt">Valor Declarado indica uma faixa de níveis de satisfação do consumidor a ser atribuída a uma avaliação da procedência.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DeclaredValue</IRI>
+        <Literal xml:lang="en">Declared Value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DeclaredValue</IRI>
+        <Literal xml:lang="pt">Valor Declarado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EndProduct</IRI>
+        <Literal xml:lang="en">An end product is an object that satisfies a consumer&apos;s business need. 
+This object is made up of raw products and has as objective value a geographical indication or a declared provenance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EndProduct</IRI>
+        <Literal xml:lang="pt">Um produto finalizado é um objeto que satisfaz a necessidade de negócio do consumidor. 
+Este objeto é composto por produtos brutos e tem como valor objetivo uma indicação geográfica ou uma procedência declarada.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EndProduct</IRI>
+        <Literal xml:lang="en">End Product</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EndProduct</IRI>
+        <Literal xml:lang="pt">Produto Finalizado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GeographicalIndication</IRI>
+        <Literal xml:lang="en">A geographical indication is a certification that assures the real provenance of a product or service, relating them not only to the origin, but also to the production methods or qualities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GeographicalIndication</IRI>
+        <Literal xml:lang="pt">A indicação geográfica é uma certificação que assegura a procedência real de um produto ou serviço, relacionando-os não apenas à origem, mas também aos métodos de produção ou qualidades.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeographicalIndication</IRI>
+        <Literal xml:lang="en">Geographical Indication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeographicalIndication</IRI>
+        <Literal xml:lang="pt">Indicação Geográfica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Neutral</IRI>
+        <Literal xml:lang="pt">Neutra</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Neutral</IRI>
+        <Literal xml:lang="en">Neutral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Payment</IRI>
+        <Literal xml:lang="pt">A atividade pagamento representa o fluxo de estoque de alguma contrapartida no processo de compra de um produto bruto ou no processo de venda de um produto finalizado. 
+Esta atividade é realizada por um agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Payment</IRI>
+        <Literal xml:lang="en">The payment activity represents the stock flow of some counter object in the process of purchasing a raw product or in the process of selling an end product. 
+This activity is performed by an agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Payment</IRI>
+        <Literal xml:lang="pt">Pagamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Payment</IRI>
+        <Literal xml:lang="en">Payment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Policy</IRI>
+        <Literal xml:lang="pt">As políticas são arranjos de elementos de redes de valor com foco no compartilhamento de informações de procedência. 
+Cada política representa um arranjo diferente de acordo com o ponto de partida da procedência compartilhada, com seu tipo e com a adição de agentes intermediários.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Policy</IRI>
+        <Literal xml:lang="en">Policies are arrangements of value network elements with a focus on sharing provenance information. 
+Each policy represents a different arrangement according to the starting point of shared provenance, its type, and the addition of intermediary agents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Policy</IRI>
+        <Literal xml:lang="en">Policy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Policy</IRI>
+        <Literal xml:lang="pt">Política</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Production</IRI>
+        <Literal xml:lang="pt">A produção representa a atividade que consome dois ou vários produtos brutos para produzir um produto finalizado. 
+Esta atividade é gerenciada por um agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Production</IRI>
+        <Literal xml:lang="en">Production represents the activity that consumes two or more raw products to produce an end product. 
+This activity is managed by an agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Production</IRI>
+        <Literal xml:lang="en">Production</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Production</IRI>
+        <Literal xml:lang="pt">Produção</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Provenance</IRI>
+        <Literal xml:lang="pt">A procedência é um valor objetivo de um produto bruto ou finalizado que satisfaz uma necessidade de negócio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Provenance</IRI>
+        <Literal xml:lang="en">Provenance is an objective value of a raw or end product that satisfies a business need.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Provenance</IRI>
+        <Literal xml:lang="pt">Procedência</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Provenance</IRI>
+        <Literal xml:lang="en">Provenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProvenanceAssessment</IRI>
+        <Literal xml:lang="pt">A avaliação de procedência representa o valor subjetivo declarado por um consumidor para a procedência de um produto bruto ou finalizado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProvenanceAssessment</IRI>
+        <Literal xml:lang="en">The provenance evaluation represents the subjective value declared by a consumer for a raw or end product provenance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProvenanceAssessment</IRI>
+        <Literal xml:lang="pt">Avaliação da Procedência</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProvenanceAssessment</IRI>
+        <Literal xml:lang="en">Provenance Assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProvenanceValueNetwork</IRI>
+        <Literal xml:lang="en">Provenance Value Network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProvenanceValueNetwork</IRI>
+        <Literal xml:lang="pt">Rede de Valor com Procedência</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Provider</IRI>
+        <Literal xml:lang="pt">O provedor é aquele que fornece a compra de um produto bruto em troca do pagamento de um contra objeto por um agente. 
+Produtores locais, associações e empresas fornecedoras de matérias-primas podem ser provedores na rede de valor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Provider</IRI>
+        <Literal xml:lang="en">The provider is the one who provides the purchase of a raw product in exchange for the payment of a counter object by an agent. 
+Local producers, associations and raw material supplier companies can be providers in the value network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Provider</IRI>
+        <Literal xml:lang="pt">Provedor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Provider</IRI>
+        <Literal xml:lang="en">Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Purchase</IRI>
+        <Literal xml:lang="pt">A atividade compra indica o fluxo de estoque de um produto bruto, que é fornecido por um provedor e recebido por um agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Purchase</IRI>
+        <Literal xml:lang="en">The purchase activity indicates the stock flow of a raw product, which is provided by a provider and received by an agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Purchase</IRI>
+        <Literal xml:lang="pt">Compra</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Purchase</IRI>
+        <Literal xml:lang="en">Purchase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RawProduct</IRI>
+        <Literal xml:lang="en">A raw product is an object that is a component of an end product. 
+This object has a geographical indication or a declared provenance as an objective value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RawProduct</IRI>
+        <Literal xml:lang="pt">Um produto bruto é um objeto que é componente de um produto finalizado.
+Este objeto tem uma indicação geográfica ou uma procedência declarada como valor objetivo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RawProduct</IRI>
+        <Literal xml:lang="pt">Produto Bruto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RawProduct</IRI>
+        <Literal xml:lang="en">Raw Product</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Receipt</IRI>
+        <Literal xml:lang="pt">A atividade recebimento representa o fluxo de estoque de alguma contrapartida no processo de venda de um produto finalizado. 
+Esta atividade é realizada por um consumidor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Receipt</IRI>
+        <Literal xml:lang="en">The receiving activity represents the stock flow of some counter object in the sales process of an end product. 
+This activity is performed by a consumer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Receipt</IRI>
+        <Literal xml:lang="pt">Recebimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Receipt</IRI>
+        <Literal xml:lang="en">Receipt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SafeShortcut</IRI>
+        <Literal xml:lang="en">Safe Shortcut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SafeWaypoint</IRI>
+        <Literal xml:lang="en">Safe Waypoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sale</IRI>
+        <Literal xml:lang="pt">A atividade venda indica o fluxo de estoque de um produto finalizado a ser recebido por um consumidor ou por um agente. 
+Esta atividade é realizada por um agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sale</IRI>
+        <Literal xml:lang="en">The sales activity indicates the stock flow of an end product to be received by a consumer or an agent. 
+This activity is performed by an agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sale</IRI>
+        <Literal xml:lang="en">Sale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sale</IRI>
+        <Literal xml:lang="pt">Venda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Shortcut</IRI>
+        <Literal xml:lang="en">Shortcut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SimplePath</IRI>
+        <Literal xml:lang="en">Simple Path</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SomewhatSatisfactory</IRI>
+        <Literal xml:lang="en">Somewhat Satisfactory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SomewhatSatisfactory</IRI>
+        <Literal xml:lang="pt">Um pouco Satisfatória</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SomewhatUnsatisfactory</IRI>
+        <Literal xml:lang="en">Somewhat Unsatisfactory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SomewhatUnsatisfactory</IRI>
+        <Literal xml:lang="pt">Um pouco Insatisfatória</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ValueActivity</IRI>
+        <Literal xml:lang="pt">Atividades de valor são ações executadas por atores que resultam em benefício próprio e para a rede.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ValueActivity</IRI>
+        <Literal xml:lang="en">Value activities are actions performed by actors that result in their own benefit and for the network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ValueActivity</IRI>
+        <Literal xml:lang="pt">Atividade de Valor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ValueActivity</IRI>
+        <Literal xml:lang="en">Value Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ValueObject</IRI>
+        <Literal xml:lang="pt">Objetos de valor são objetos monetários ou não monetários que satisfazem uma necessidade e têm valor econômico para pelo menos um dos atores que participam da rede.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ValueObject</IRI>
+        <Literal xml:lang="en">Value objects are monetary or non-monetary objects that satisfy a need and have economic value for at least one of the actors participating in the network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ValueObject</IRI>
+        <Literal xml:lang="pt">Objeto de Valor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ValueObject</IRI>
+        <Literal xml:lang="en">Value Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ValueProposition</IRI>
+        <Literal xml:lang="en">A value proposition can be a  value object or provenance evaluation that represents a promise from one actor to another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ValueProposition</IRI>
+        <Literal xml:lang="pt">Uma proposição de valor pode ser um objeto de valor ou avaliação da procedência que representa uma promessa de um ator para outro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ValueProposition</IRI>
+        <Literal xml:lang="pt">Proposição de Valor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ValueProposition</IRI>
+        <Literal xml:lang="en">Value Proposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VerySatisfactory</IRI>
+        <Literal xml:lang="pt">Muito Satisfatória</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VerySatisfactory</IRI>
+        <Literal xml:lang="en">Very Satisfactory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VeryUnsatisfactory</IRI>
+        <Literal xml:lang="pt">Muito Insatisfatória</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VeryUnsatisfactory</IRI>
+        <Literal xml:lang="en">Very Unsatisfactory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Waypoint</IRI>
+        <Literal xml:lang="en">Waypoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bundles</IRI>
+        <Literal xml:lang="pt">agrupa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bundles</IRI>
+        <Literal xml:lang="en">bundles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#consumes</IRI>
+        <Literal xml:lang="pt">consome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#consumes</IRI>
+        <Literal xml:lang="en">consumes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#declares</IRI>
+        <Literal xml:lang="pt">declara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#declares</IRI>
+        <Literal xml:lang="en">declares</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#delivers</IRI>
+        <Literal xml:lang="en">delivers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#delivers</IRI>
+        <Literal xml:lang="pt">entrega</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#demands</IRI>
+        <Literal xml:lang="pt">demanda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#demands</IRI>
+        <Literal xml:lang="en">demands</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_GI_name</IRI>
+        <Literal xml:lang="en">has GI name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_GI_name</IRI>
+        <Literal xml:lang="pt">tem nome IG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_ID</IRI>
+        <Literal xml:lang="en">has ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_ID</IRI>
+        <Literal xml:lang="pt">tem ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_certification</IRI>
+        <Literal xml:lang="en">has certification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_certification</IRI>
+        <Literal xml:lang="pt">tem certificação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_componency</IRI>
+        <Literal xml:lang="en">has componency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_componency</IRI>
+        <Literal xml:lang="pt">tem composição</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_component</IRI>
+        <Literal xml:lang="en">has component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_component</IRI>
+        <Literal xml:lang="pt">tem componente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_constituition</IRI>
+        <Literal xml:lang="en">has constituition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_constituition</IRI>
+        <Literal xml:lang="pt">tem constituição</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_declared_value</IRI>
+        <Literal xml:lang="en">has declared value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_declared_value</IRI>
+        <Literal xml:lang="pt">tem valor declarado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_geographical_area</IRI>
+        <Literal xml:lang="en">has geographical area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_geographical_area</IRI>
+        <Literal xml:lang="pt">tem área geográfica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_link</IRI>
+        <Literal xml:lang="en">has link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_link</IRI>
+        <Literal xml:lang="pt">tem link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_location</IRI>
+        <Literal xml:lang="en">has location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_location</IRI>
+        <Literal xml:lang="pt">tem localização</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_name</IRI>
+        <Literal xml:lang="en">has name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_name</IRI>
+        <Literal xml:lang="pt">tem nome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_number</IRI>
+        <Literal xml:lang="en">has number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_number</IRI>
+        <Literal xml:lang="pt">tem número</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_objective_value</IRI>
+        <Literal xml:lang="en">has objective value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_objective_value</IRI>
+        <Literal xml:lang="pt">tem valor objetivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_origin_country</IRI>
+        <Literal xml:lang="en">has origin country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_origin_country</IRI>
+        <Literal xml:lang="pt">tem país de origem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_product_description</IRI>
+        <Literal xml:lang="en">has product description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_product_description</IRI>
+        <Literal xml:lang="pt">tem descrição do produto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_product_name</IRI>
+        <Literal xml:lang="en">has product name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_product_name</IRI>
+        <Literal xml:lang="pt">tem nome do produto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_product_type</IRI>
+        <Literal xml:lang="en">has product type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_product_type</IRI>
+        <Literal xml:lang="pt">tem tipo do produto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_production_method</IRI>
+        <Literal xml:lang="en">has production method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_production_method</IRI>
+        <Literal xml:lang="pt">tem método de produção</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_stock_flow</IRI>
+        <Literal xml:lang="en">has stock flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_stock_flow</IRI>
+        <Literal xml:lang="pt">tem fluxo de estoque</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_subjective_value</IRI>
+        <Literal xml:lang="en">has subjective value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_subjective_value</IRI>
+        <Literal xml:lang="pt">tem valor subjetivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_symbol</IRI>
+        <Literal xml:lang="en">has symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_symbol</IRI>
+        <Literal xml:lang="pt">tem símbolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_type</IRI>
+        <Literal xml:lang="en">has type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_type</IRI>
+        <Literal xml:lang="pt">tem tipo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_bundled_by</IRI>
+        <Literal xml:lang="en">is bundled by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_bundled_by</IRI>
+        <Literal xml:lang="pt">é agrupada por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_component_of</IRI>
+        <Literal xml:lang="en">is component of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_component_of</IRI>
+        <Literal xml:lang="pt">é componente de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_consumed_by</IRI>
+        <Literal xml:lang="en">is consumed by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_consumed_by</IRI>
+        <Literal xml:lang="pt">é consumido por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_declared_by</IRI>
+        <Literal xml:lang="en">is declared by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_declared_by</IRI>
+        <Literal xml:lang="pt">é declarada por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_delivered_by</IRI>
+        <Literal xml:lang="en">is delivered by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_delivered_by</IRI>
+        <Literal xml:lang="pt">é entregue por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_demanded_by</IRI>
+        <Literal xml:lang="en">is demanded by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_demanded_by</IRI>
+        <Literal xml:lang="pt">é demandada por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_managed_by</IRI>
+        <Literal xml:lang="en">is managed by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_managed_by</IRI>
+        <Literal xml:lang="pt">é gerenciada por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_objective_value_of</IRI>
+        <Literal xml:lang="en">is objective value of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_objective_value_of</IRI>
+        <Literal xml:lang="pt">é valor objetivo de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_produced_by</IRI>
+        <Literal xml:lang="en">is produced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_produced_by</IRI>
+        <Literal xml:lang="pt">é produzido por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_provided_by</IRI>
+        <Literal xml:lang="en">is provided by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_provided_by</IRI>
+        <Literal xml:lang="pt">é fornecida por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_satisfied_by</IRI>
+        <Literal xml:lang="en">is satisfied by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_satisfied_by</IRI>
+        <Literal xml:lang="pt">é satisfeita por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_shared_by</IRI>
+        <Literal xml:lang="en">is shared by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_shared_by</IRI>
+        <Literal xml:lang="pt">é compartilhada por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_stock_flow_of</IRI>
+        <Literal xml:lang="en">is stock flow of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_stock_flow_of</IRI>
+        <Literal xml:lang="pt">é fluxo de estoque de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_subjective_value_of</IRI>
+        <Literal xml:lang="en">is subjective value of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_subjective_value_of</IRI>
+        <Literal xml:lang="pt">é valor subjetivo de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manages</IRI>
+        <Literal xml:lang="pt">gerencia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manages</IRI>
+        <Literal xml:lang="en">manages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#produces</IRI>
+        <Literal xml:lang="en">produces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#produces</IRI>
+        <Literal xml:lang="pt">produz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#provides</IRI>
+        <Literal xml:lang="pt">fornece</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#provides</IRI>
+        <Literal xml:lang="en">provides</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#satisfies</IRI>
+        <Literal xml:lang="pt">satisfaz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#satisfies</IRI>
+        <Literal xml:lang="en">satisfies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shares</IRI>
+        <Literal xml:lang="pt">compartilha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shares</IRI>
+        <Literal xml:lang="en">shares</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
